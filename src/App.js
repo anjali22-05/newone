@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from "react";
-import { Github, Linkedin, ExternalLink, Code2, Terminal, Globe, Database, GitBranch, Layers, Zap, Link, ChevronRight, Star, Briefcase, GraduationCap, Mail, ArrowUpRight, MousePointer2 } from "lucide-react";
 
 // ─── PALETTE ───────────────────────────────────────────────────────────────
 const C = {
