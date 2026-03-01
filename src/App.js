@@ -282,7 +282,7 @@ function Counter({ end, label, color }) {
       setVal(start); requestAnimationFrame(step);
     };
     requestAnimationFrame(step);
-  }, [inView]);
+  }, [inView,end]);
   return (
     <div ref={ref} style={{ textAlign: "center" }}>
       <div style={{ fontSize: "2.8rem", fontFamily: "'Syne', sans-serif", fontWeight: 800, background: color, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
