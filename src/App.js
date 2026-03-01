@@ -311,7 +311,7 @@ function Counter({ end, label, color }) {
 
 // ─── MAIN ──────────────────────────────────────────────────────────────────
 export default function Portfolio() {
-  const [activeSection, setActiveSection] = useState("home");
+//  const [activeSection, setActiveSection] = useState("home");
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
