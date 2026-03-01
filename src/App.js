@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-
+import { Github, Linkedin, ExternalLink, Code2, Link, Briefcase,  ArrowUpRight,  MessageSquare, Tent, Server } from "lucide-react";
 // ─── PALETTE ───────────────────────────────────────────────────────────────
 const C = {
   bg: "#050510",
