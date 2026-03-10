@@ -1,6 +1,22 @@
 import { useState, useEffect, useRef } from "react";
-import { Github, Linkedin, ExternalLink, Code2, Terminal, Globe, Database, GitBranch, Layers, Zap, Link, ChevronRight, Star, Briefcase, GraduationCap, Mail, ArrowUpRight, MousePointer2 } from "lucide-react";
-
+ import {
+  Github,
+  Linkedin,
+  ExternalLink,
+  Code2,
+  Link,
+  Briefcase,
+  ArrowUpRight,
+  Terminal,
+  Globe,
+  Zap,
+  Layers,
+  Database,
+  GitBranch,
+  GraduationCap,
+  ChevronRight
+} from "lucide-react"; 
+import profile from "./assets/anjali.jpg";
 // ─── PALETTE ───────────────────────────────────────────────────────────────
 const C = {
   bg: "#050510",
@@ -106,7 +122,7 @@ function useInView(threshold = 0.1) {
     const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) setInView(true); }, { threshold });
     if (ref.current) obs.observe(ref.current);
     return () => obs.disconnect();
-  }, []);
+  }, [threshold]);
   return [ref, inView];
 }
 
@@ -283,7 +299,7 @@ function Counter({ end, label, color }) {
       setVal(start); requestAnimationFrame(step);
     };
     requestAnimationFrame(step);
-  }, [inView]);
+  }, [inView,end]);
   return (
     <div ref={ref} style={{ textAlign: "center" }}>
       <div style={{ fontSize: "2.8rem", fontFamily: "'Syne', sans-serif", fontWeight: 800, background: color, WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
@@ -296,7 +312,7 @@ function Counter({ end, label, color }) {
 
 // ─── MAIN ──────────────────────────────────────────────────────────────────
 export default function Portfolio() {
-  const [activeSection, setActiveSection] = useState("home");
+//  const [activeSection, setActiveSection] = useState("home");
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
@@ -444,12 +460,34 @@ export default function Portfolio() {
                 position: "relative", overflow: "hidden",
                 boxShadow: `0 40px 80px ${C.pink}22, 0 0 0 1px ${C.border}`,
               }}>
-                <div style={{ position: "absolute", inset: 0, background: GRADIENTS.hero, opacity: 0.05 }} />
-                <div style={{
+                {/* <div style={{ position: "absolute", inset: 0, background: GRADIENTS.hero, opacity: 0.05 }} /> */}
+                {/* <div style={{
                   width: 100, height: 100, borderRadius: "50%", marginBottom: 16,
                   background: GRADIENTS.hero, display: "flex", alignItems: "center", justifyContent: "center",
                   fontSize: "2.5rem", boxShadow: `0 0 30px ${C.pink}55`,
-                }}>👩‍💻</div>
+                }}>👩‍💻</div> */}
+
+                <div
+  style={{
+    width: 100,
+    height: 100,
+    borderRadius: "50%",
+    marginBottom: 16,
+    overflow: "hidden",
+    border: `3px solid ${C.pink}`,
+    boxShadow: `0 0 30px ${C.pink}55`,
+  }}
+>
+  <img
+    src={profile}
+    alt="Anjali Verma"
+    style={{
+      width: "100%",
+      height: "100%",
+      objectFit: "cover",
+    }}
+  />
+</div>
                 <div style={{ fontFamily: "'Syne', sans-serif", fontWeight: 700, fontSize: "1rem", marginBottom: 4 }}>Anjali Verma</div>
                 <div style={{ fontSize: "0.7rem", fontFamily: "monospace", color: C.cyan, letterSpacing: "0.05em", marginBottom: 16 }}>CSE · AI/ML · Final Year</div>
                 <div style={{ display: "flex", gap: 8 }}>
