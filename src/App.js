@@ -105,7 +105,7 @@ const EXPERIENCE = [
   {
     role: "B.Tech — CSE (AI/ML)",
     company: "University · Final Year",
-    period: "2021 – 2025",
+    period: "2021 – 2026",
     icon: <GraduationCap size={18} />,
     color: C.cyan,
     bg: "#001a1f",
