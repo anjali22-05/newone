@@ -105,7 +105,7 @@ const EXPERIENCE = [
   {
     role: "B.Tech — CSE (AI/ML)",
     company: "University · Final Year",
-    period: "2021 – 2026",
+    period: "2022 – 2026",
     icon: <GraduationCap size={18} />,
     color: C.cyan,
     bg: "#001a1f",
@@ -605,7 +605,7 @@ export default function Portfolio() {
 
           <FadeIn delay={0.25}>
             <div style={{ borderTop: `1px solid ${C.border}`, paddingTop: 32, display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 12 }}>
-              <span style={{ fontSize: "0.72rem", fontFamily: "monospace", color: C.dim }}>© 2025 Anjali Verma · CSE AI/ML</span>
+              <span style={{ fontSize: "0.72rem", fontFamily: "monospace", color: C.dim }}>© 2026 Anjali Verma · CSE AI/ML</span>
               <span style={{ fontSize: "0.72rem", fontFamily: "monospace", color: C.dim }}>Built with React ✦ Designed with ♥</span>
             </div>
           </FadeIn>
